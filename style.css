@@ -98,7 +98,7 @@ nav ul li a {
     width: 404px;
 }
 
-.new_prod .container-box .box a {
+.con.new_prod tainer-box .box a {
     color: rgb(129, 129, 129);
 }
 
@@ -107,3 +107,95 @@ nav ul li a {
     height: 640px;
     object-fit: contain;
 }
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 735px 515px; /* Первая и вторая колонки */
+    grid-template-rows: 400px; /* Высота для правой части */
+    gap: 35px; /* Расстояние между колонками */
+  }
+  
+  .featured-product {
+    grid-column: 1 / 2;
+    width: 735px;
+    height: 746px;
+  }
+  
+  .featured-product img {
+    width: 735px;
+    height: 642px;
+    object-fit: cover; /* Обрезает изображение по размеру */
+    border-radius: 8px;
+  }
+  
+  .product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 515px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .product img {
+    width: 515px;
+    height: 244px; /* Размер изображения внутри блоков */
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .product.top {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    height: 382px; /* Половина высоты для первого блока */
+  }
+  
+  .product.lower {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    height: 382px; /* Половина высоты для второго блока */
+  }
+  
+  h2 {
+    font-size: 1.2em;
+    margin: 0;
+  }
+  
+  p {
+    font-size: 0.9em;
+    margin: 5px 0;
+  }
+  
+  span {
+    font-size: 1em;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .featured-product,
+    .product {
+      width: 100%;
+      height: auto;
+    }
+  
+    .featured-product img,
+    .product img {
+      width: 100%;
+      height: auto;
+    }
+  }
