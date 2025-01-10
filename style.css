@@ -3,51 +3,56 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-}
-
-.header{
-    display: block-flex;
-    width: 100%;
-    min-width: 20%;
-    background-image: #ffffff;
-    background-size: cover;
-    background-position: center;
-    padding: 10px 5%;
     font-size: 20px;
-    flex-direction: row;
-}
-.name {
-    display: inline-block;
-    white-space: pre-wrap;
-    color: #000;
-    text-decoration: none;
-    margin-inline: 90px;
-}
-nav {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-    padding: 10px 0;
 }
 
-nav ul {
-    list-style: none;
-    width: 100%;
-    text-align: right;
-    padding-left: 60px;
+.container {
+  max-width: 1440px;
+  margin: 0px, auto;
+ 
+  /* background-color: #6b6b6b; */
 }
 
-nav ul li {
-    display: inline-block;
-    margin: 10px 20px;
+.header {
+  margin-top: 56px;
+  /* background-color: #000; */
+} 
+
+.header-content {
+  /* background-color: #fc5757; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0x;
 }
 
-nav ul li a {
-    color: #000;
-    text-decoration: none;
+.header-content-btn {
+  display: flex;
+  align-items: center;
 }
+
+nav a {
+text-decoration: none;
+margin-left: 48px;
+margin-top: 50px;
+}
+
+nav a:first-child{
+  display: flex;
+  gap: 500px;
+}
+
+.crumb {
+display: inline-block;
+}
+.crumb a::after {
+display: inline-block;
+color: #000000;
+font-size: 80%;
+font-weight: bold;
+padding: 0 3px;
+}
+
 
 .btn_log_out{
     display: inline-flex;
@@ -64,8 +69,6 @@ nav ul li a {
     margin-right: 20px;
     font-size: 16px;
 }
-
-
 
 .new_prod {
     padding: 10px 80px 10px 80px;
@@ -157,12 +160,12 @@ h1 {
   
   .product.top {
     grid-column: 2 / 3;
-    grid-row: 1 / 2;
+    grid-row: 1 / 1;
     height: 382px; /* Половина высоты для первого блока */
   }
   
   .product.lower {
-    grid-column: 2 / 3;
+    grid-column: 2 / 2;
     grid-row: 2 / 3;
     height: 382px; /* Половина высоты для второго блока */
   }
